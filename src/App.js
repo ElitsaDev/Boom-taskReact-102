@@ -1,9 +1,19 @@
 import "./App.css";
+import { motion } from "framer-motion/dist/framer-motion"
 
 function App() {
+
   return (
     <div className="App">
-      <form>
+      <motion.div
+       animate={{ x: 1000 }}
+       transition={{
+        repeat: 1,
+        repeatType: "reverse",
+        duration: 2
+      }}
+      >
+      <form>     
         <h1>Create An Account</h1>
         <label>
           Email:
@@ -15,6 +25,7 @@ function App() {
         </label>
         <button>Sign Up!</button>
       </form>
+    </motion.div>  
     </div>
   );
 }
